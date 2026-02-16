@@ -5,6 +5,8 @@ import './App.css'
 import Navigation from './Components/NavigationBar'
 import Banner from './Components/Banner'
 import LoginPage from './Components/LoginPage'
+import CardView from './Components/cardView'
+import Services from './Components/Services'
 
 function App() {
  
@@ -13,7 +15,9 @@ function App() {
     <>
      <Navigation/>
      <Banner/>
+     <Services/>
      <LoginPage/>
+     
     </>
   )
 }
