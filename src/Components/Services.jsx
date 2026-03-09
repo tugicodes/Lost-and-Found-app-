@@ -1,4 +1,4 @@
-import CardView from "./cardView";
+import CardView from "./Cards";
 import retrieve from '../assets/retrieve.png';
 import report from '../assets/report.png';
 import support from '../assets/community.png';
