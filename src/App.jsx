@@ -10,6 +10,9 @@ import Services from './Components/Services'
 import { Routes, Route} from 'react-router-dom'
 import Contacts from './Components/Contacts'
 import Footer from './Components/Footer'
+import SignUp from './Components/SignUp'
+import ProtectedRoute from './Components/ProtectedRoute'
+import UserDashboard from './Components/userDashboard'
 
 function App() {
  
@@ -26,6 +29,14 @@ function App() {
               <Route path="/services" element= {<Services/>} />
               <Route path="/login" element= {<LoginPage/>} />
               <Route path="/contacts" element= {<Contacts/>}/>
+              <Route path="/signup" element= {<SignUp/>}/>
+
+              <Route path= "/user-dashboard"
+              element= {
+              <ProtectedRoute>
+                <UserDashboard />
+                </ProtectedRoute>}
+              />
 
           </Routes>
           </main>

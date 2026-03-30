@@ -149,6 +149,30 @@ form button:hover {
   transform: translateY(-2px);
   box-shadow: 0 5px 20px rgba(102, 126, 234, 0.4);
 }
+/*Signup page styling*/
+.signupContainer{
+  display: flex;
+  justify-content: center;
+  gap: 100px;
+  align-items: center;
+  height: 400px;
+  background-color: #f0f0f0;
+  padding: 0 20px;
+  flex:1;
+  display:flex;
+}
+
+/*.signupBox{
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
 
 /* Services section styling */
 .services {

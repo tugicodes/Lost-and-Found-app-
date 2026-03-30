@@ -12,6 +12,7 @@ export default function Navigation (){
                 <li><Link to="/services"> About Us </Link></li>
                 <li><Link to="/contacts"> Contacts </Link></li>
                 <li><Link to="/login"> Login </Link></li>
+                <li><Link to="/signup"> Sign Up </Link></li>
             </ul>
         </nav>
     )
