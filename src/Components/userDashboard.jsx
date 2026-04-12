@@ -1,4 +1,4 @@
-import { useNavigate } from "react-router-dom";
+import { NavLink, Outlet, useNavigate } from "react-router-dom";
 
 function UserDashboard() {
   const user = JSON.parse(localStorage.getItem("user"));
@@ -10,16 +10,27 @@ function UserDashboard() {
   };
 
   return (
-    <div style={{ padding: "20px" }}>
-      <h1>User Dashboard</h1>
+    <div className="dashboardContainer">
+      <aside className="sidebar">
+        <h2>Lost & Found</h2>
+        <p className="welcomeText">Welcome {user?.username}</p>
 
-      {user ? (
-        <h2>Welcome {user.username}</h2>
-      ) : (
-        <h2>No user logged in</h2>
-      )}
+        <nav className="sidebarMenu">
+          <NavLink to="report" className="menuLink">
+            Report Lost Item
+          </NavLink>
+          <NavLink to="view" className="menuLink">
+            View Lost Items
+          </NavLink>
+          <button className="logoutButton" onClick={handleLogout}>
+            Logout
+          </button>
+        </nav>
+      </aside>
 
-      <button onClick={handleLogout}>Logout</button>
+      <main className="dashboardMain">
+        <Outlet />
+      </main>
     </div>
   );
 }

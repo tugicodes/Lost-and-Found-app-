@@ -20,11 +20,12 @@ app.use(express.json());
 app.use("/api/login", loginRoute);
 app.use("/api/signup", signupRoute);
 app.use('/api/users', userRoutes);
+app.use("/api/lostitems", require("./routes/lostItems"));
 
 //connect database 
 connectDB();
 
-//test routes
+//test routes (not actually used)
 app.get ('/', (req, res) =>{
    
     res.send('This is the Home page'); //response to the request
@@ -41,12 +42,13 @@ app.get ('/contact', (req,res) => {
 
 }); 
 
-app.listen (PORT, () => {
-
-    console.log('Server is running on port ' + PORT);
-});
-
 app.get('/html', (req,res) => {
     res.send("<h1>Welcome to the HTML page</h1><p>This is a simple HTML response.</p>");
 
+}); 
+
+//starts server
+app.listen (PORT, () => {
+
+    console.log('Server is running on port ' + PORT);
 });
